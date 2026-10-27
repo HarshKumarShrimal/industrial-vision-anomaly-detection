@@ -1,0 +1,10 @@
+defaults: default.yaml
+
+method: padim
+
+model:
+  backbone: wide_resnet50_2
+  layers: [layer1, layer2, layer3]
+  n_dims: 550             # randomly-kept embedding channels (100 for resnet18)
+  epsilon: 0.01           # covariance regularisation
+  sigma: 4.0

@@ -1,0 +1,11 @@
+defaults: default.yaml
+
+method: patchcore
+
+model:
+  backbone: wide_resnet50_2
+  layers: [layer2, layer3]
+  coreset_ratio: 0.1      # keep 10% of patches; 0.01 is faster, ~same AUROC
+  num_neighbors: 9        # b in the image-score reweighting (Eq. 7)
+  projection_dim: 128     # JL projection used only during coreset selection
+  sigma: 4.0              # Gaussian smoothing of the anomaly map

@@ -1,0 +1,32 @@
+[
+  {
+    "image_auroc": 1.0,
+    "pixel_auroc": 0.993058389657611,
+    "inference_ms_per_image": 9.867555499719552,
+    "pro": 0.9768497617079779,
+    "category": "bottle",
+    "method": "patchcore",
+    "fit_seconds": 15.02836141700027,
+    "total_elapsed_sec": 27.015
+  },
+  {
+    "image_auroc": 1.0,
+    "pixel_auroc": 0.9938334282996635,
+    "inference_ms_per_image": 10.57123616677321,
+    "pro": 0.9793972917638638,
+    "category": "bottle",
+    "method": "padim",
+    "fit_seconds": 14.356870999999956,
+    "total_elapsed_sec": 26.316
+  },
+  {
+    "image_auroc": 1.0,
+    "pixel_auroc": 0.9999804693214902,
+    "inference_ms_per_image": 5.413562333463536,
+    "pro": 0.9999339844737484,
+    "category": "bottle",
+    "method": "autoencoder",
+    "fit_seconds": 72.23375920800027,
+    "total_elapsed_sec": 84.109
+  }
+]

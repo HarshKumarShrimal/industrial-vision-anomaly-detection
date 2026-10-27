@@ -1,0 +1,14 @@
+# Shared defaults inherited by every experiment config via `defaults: default.yaml`.
+seed: 42
+compute_pro: true
+
+data:
+  # Point this at the folder containing the 15 category sub-directories.
+  root: ./data/mvtec_ad
+  resize: 256      # resize shorter side before cropping
+  crop: 224        # model input resolution
+  batch_size: 8
+  num_workers: 2
+
+# Categories to run when none are passed explicitly on the CLI.
+categories: all     # "all" -> the 15 MVTec AD categories

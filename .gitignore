@@ -1,0 +1,53 @@
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & linting
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Datasets (Strictly excluded - MVTec AD CC BY-NC-SA 4.0)
+data/mvtec/
+data/raw/
+*.tar.gz
+*.tar.xz
+*.zip
+
+# Checkpoints & weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# IDE & OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

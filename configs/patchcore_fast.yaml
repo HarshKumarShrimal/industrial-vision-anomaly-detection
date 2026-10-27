@@ -1,0 +1,17 @@
+# Lightweight config for quick CPU / smoke runs and the resnet18 ablation.
+defaults: default.yaml
+
+method: patchcore
+
+model:
+  backbone: resnet18
+  layers: [layer2, layer3]
+  coreset_ratio: 0.01
+  num_neighbors: 9
+  projection_dim: 64
+  sigma: 4.0
+
+data:
+  resize: 128
+  crop: 128
+  batch_size: 8

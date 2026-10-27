@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iad"
+version = "0.1.0"
+description = "Training-free unsupervised industrial anomaly detection & localization on MVTec AD."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad Taha" }]
+keywords = [
+    "anomaly-detection",
+    "computer-vision",
+    "mvtec",
+    "patchcore",
+    "padim",
+    "industrial-inspection",
+]
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+    "scikit-image>=0.19",
+    "pillow>=9.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.64",
+    "matplotlib>=3.6",
+    "pandas>=1.5",
+    "tabulate>=0.9",
+    "datasets>=2.14",
+    "faiss-cpu>=1.7; platform_system != 'Darwin'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "ruff>=0.1", "mypy>=1.5"]
+
+[project.scripts]
+iad-download = "scripts.download_data:main"
+iad-benchmark = "scripts.run_benchmark:main"
+iad-figures = "scripts.generate_figures:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

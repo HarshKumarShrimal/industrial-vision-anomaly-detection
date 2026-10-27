@@ -1,0 +1,13 @@
+defaults: default.yaml
+
+method: autoencoder
+
+model:
+  latent: 100
+  epochs: 50
+  lr: 0.002
+  sigma: 4.0
+
+# The AE trains, so a slightly larger batch helps throughput on a T4.
+data:
+  batch_size: 16
